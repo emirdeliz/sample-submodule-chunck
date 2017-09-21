@@ -1,5 +1,6 @@
 import React from 'react';
 import { Map as MapLeaflet, TileLayer, WMSTileLayer } from 'react-leaflet';
+import LeafletCss from 'leaflet/dist/leaflet.css';
 import Style from './Map.style.scss';
 
 class Map extends React.Component {
@@ -14,10 +15,12 @@ class Map extends React.Component {
   }
 
   componentWillMount() {
+    LeafletCss.use();
     Style.use();
   }
 
   componentWillUnmount() {
+    LeafletCss.unuse();
     Style.unuse();
   }
 
