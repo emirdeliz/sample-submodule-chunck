@@ -35,7 +35,7 @@ class Map extends React.Component {
       <div className="map">
         <MapLeaflet
           center={[this.state.lat, this.state.lng]}
-          zoom={18}
+          zoom={10}
           style={{ flex: 1 }}
         >
           <TileLayer
